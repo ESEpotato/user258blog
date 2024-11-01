@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在树莓派入门使用手册（一）过后，咱们的树莓派微机能根据需求玩起来用起来了，而我根据实际情况（有台WD-SSD-1T-2024：￥500）和需求，打算整个简单但能玩的NAS服务器； 参考链接：https:&#x2F;&#x2F;www.zhihu.com&#x2F;collection&#x2F;964553545 我将朋友分享的资源存在某盘，有隐私安全、上传&amp;下载速度很慢等问题，有问题就有需求，下面逐步解决需求； 4.3 NAS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/10/30/241030%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在树莓派入门使用手册（一）过后，咱们的树莓派微机能根据需求玩起来用起来了，而我根据实际情况（有台WD-SSD-1T-2024：￥500）和需求，打算整个简单但能玩的NAS服务器； 参考链接：https:&#x2F;&#x2F;www.zhihu.com&#x2F;collection&#x2F;964553545 我将朋友分享的资源存在某盘，有隐私安全、上传&amp;下载速度很慢等问题，有问题就有需求，下面逐步解决需求； 4.3 NAS">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-29T16:29:03.438Z">
+<meta property="article:modified_time" content="2024-10-29T16:29:03.438Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-241030树莓派入门使用手册（二）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/30/241030%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2024-10-29T16:29:03.438Z" itemprop="datePublished">2024-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在树莓派入门使用手册（一）过后，咱们的树莓派微机能根据需求玩起来用起来了，而我根据实际情况（有台WD-SSD-1T-2024：￥500）和需求，打算整个简单但能玩的NAS服务器；</p>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/collection/964553545">https://www.zhihu.com/collection/964553545</a></p>
+<p>我将朋友分享的资源存在某盘，有隐私安全、上传&amp;下载速度很慢等问题，有问题就有需求，下面逐步解决需求；</p>
+<p>4.3 NAS服务器<br>4.3.1 NAS是什么？做什么的？<br>NAS：Network Attached Storage网络附属存储，做下载机&#x2F;个人云盘&#x2F;片库管理&#x2F;书库管理等；</p>
+<p>4.3.2 部署NAS<br>软件方案：群辉&#x2F;威联通&#x2F;华硕&#x2F;OpenMediaVault（OMV）等；</p>
+<p>（1）部署OMV环境</p>
+<p>1）换源</p>
+<p>sudo vi &#x2F;etc&#x2F;apt&#x2F;sources.list  </p>
+<h1 id="注释之前的，拷贝下面的中科大和清华镜像源到文件中"><a href="#注释之前的，拷贝下面的中科大和清华镜像源到文件中" class="headerlink" title="注释之前的，拷贝下面的中科大和清华镜像源到文件中"></a>注释之前的，拷贝下面的中科大和清华镜像源到文件中</h1><p>deb <a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/raspbian/raspbian/">http://mirrors.ustc.edu.cn/raspbian/raspbian/</a> buster main contrib non-free rpi<br>deb <a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> buster main contrib non-free rpi<br>deb-src <a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a> buster main contrib non-free rpi<br>sudo vi &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;raspi.list</p>
+<h1 id="注释之前的，拷贝下面的中科大和清华镜像源到文件中-1"><a href="#注释之前的，拷贝下面的中科大和清华镜像源到文件中-1" class="headerlink" title="注释之前的，拷贝下面的中科大和清华镜像源到文件中"></a>注释之前的，拷贝下面的中科大和清华镜像源到文件中</h1><p>deb <a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/">http://mirrors.ustc.edu.cn/archive.raspberrypi.org/debian/</a> buster main ui<br>deb <a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/">http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/</a> buster main ui<br>deb-src <a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/">http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/</a> buster main ui</p>
+<h1 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h1><p>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y<br>2）安装并登录OMV</p>
+<p>从github仓库获取安装脚本；</p>
+<p>获取链接：<a target="_blank" rel="noopener" href="https://github.com/OpenMediaVault-Plugin-Developers/installScript">https://github.com/OpenMediaVault-Plugin-Developers/installScript</a></p>
+<h1 id="再手动安装"><a href="#再手动安装" class="headerlink" title="再手动安装"></a>再手动安装</h1><p>sudo chmod +x  ??? &amp;&amp; sudo install  ???<br>最后登录OMV网页（默认admin&#x2F;openmediavault）；电脑浏览器输入http:&#x2F;&#x2F;树莓派ip</p>
+<p>3）设置OMV（可选操作）</p>
+<p>常规设置里设置自动登出时间为1天；</p>
+<p>基于磁盘（SSD）创建共享文件夹，开启smb实现共享；</p>
+<p>4）基于OMV安装omvextras插件（可选操作）</p>
+<p>从清华源获取omv-extras镜像插件；获取链接：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/OpenMediaVault/openmediavault-plugin-developers/pool/main/o/openmediavault-omvextrasorg/">https://mirrors.tuna.tsinghua.edu.cn/OpenMediaVault/openmediavault-plugin-developers/pool/main/o/openmediavault-omvextrasorg/</a></p>
+<p>再手动上传并安装；</p>
+<p>5）基于ovmextras插件安装Docker</p>
+<h1 id="更新omvextras软件源"><a href="#更新omvextras软件源" class="headerlink" title="更新omvextras软件源"></a>更新omvextras软件源</h1><p>sudo vi &#x2F;etc&#x2F;sources.list.d&#x2F;omvextras.list<br>deb <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/OpenMediaVault/openmediavault-plugin-developers">https://mirrors.tuna.tsinghua.edu.cn/OpenMediaVault/openmediavault-plugin-developers</a> usul main<br>deb [arch&#x3D;armhf] <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian">https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian</a> buster stable<br>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y<br>6）pull &amp;&amp; deploy docker镜像</p>
+<p>用portainer工具&#x2F;命令行方式来pull &amp;&amp; deploy docker镜像；不展开来说，找个自己能解决问题的姿势就行；</p>
+<p>（2）下载机</p>
+<p>软件方案：transmission保种，qbittorrent日常下载等；</p>
+<p>1）挂载硬盘</p>
+<h1 id="参考如下内容，根据实际情况来设置"><a href="#参考如下内容，根据实际情况来设置" class="headerlink" title="参考如下内容，根据实际情况来设置"></a>参考如下内容，根据实际情况来设置</h1><p>sudo umount &#x2F;dev&#x2F;sda1<br>sudo mkdir &#x2F;mnt&#x2F;ssd<br>sudo vi &#x2F;etc&#x2F;fstab</p>
+<h1 id="添加如下内容"><a href="#添加如下内容" class="headerlink" title="添加如下内容"></a>添加如下内容</h1><p>&#x2F;dev&#x2F;sda1 &#x2F;mnt&#x2F;ssd exfat defaults 0 0</p>
+<h1 id="确认生效"><a href="#确认生效" class="headerlink" title="确认生效"></a>确认生效</h1><p>sudo mount -a &amp;&amp; lsblk -f<br>2）pull &amp;&amp; deploy transmission</p>
+<h1 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h1><p>sudo docker pull linuxserver&#x2F;transmission:arm32v7-4.0.2</p>
+<h1 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h1><p>sudo docker run -d <br>  –name&#x3D;transmission <br>  –net&#x3D;host <br>  -e PUID&#x3D;1000 <br>  -e PGID&#x3D;1000 <br>  -e TZ&#x3D;Asia&#x2F;Shanghai <br>  -e USER&#x3D;admin <br>  -e PASS&#x3D;passwd <br>  -v &#x2F;data&#x2F;transmission&#x2F;config:&#x2F;config <br>  -v &#x2F;data&#x2F;transmission&#x2F;downloads:&#x2F;downloads <br>  -v &#x2F;data&#x2F;transmission&#x2F;watch:&#x2F;watch <br>  -p 9091:9091 <br>  -p 51413:51413 <br>  -p 51413:51413&#x2F;udp <br>  –restart&#x3D;always <br>  linuxserver&#x2F;transmission:arm32v7-4.0.2</p>
+<p>#上述deploy缺少权限选项的配置以及PUID、PGID（id $user;选root）</p>
+<h1 id="docker-logs-transmission看到打印，补充后即可"><a href="#docker-logs-transmission看到打印，补充后即可" class="headerlink" title="docker logs transmission看到打印，补充后即可"></a>docker logs transmission看到打印，补充后即可</h1><p>s6-svscan: warning: unable to iopause: Operation not permitted<br>s6-svscan: warning: executing into .s6-svscan&#x2F;crash<br>s6-svscan crashed. Killing everything and exiting.<br>s6-linux-init-hpr: fatal: unable to reboot(): Operation not permitted<br>sudo docker run –privileged –cap-add&#x3D;SYS_ADMIN -d <br>  –name&#x3D;transmission <br>  -e PUID&#x3D; <br>  -e PGID&#x3D; <br>  -e TZ&#x3D;Asia&#x2F;Shanghai <br>  -e USER&#x3D;admin <br>  -e PASS&#x3D;passwd <br>  -v &#x2F;data&#x2F;transmission&#x2F;config:&#x2F;config <br>  -v &#x2F;media&#x2F;WDssd&#x2F;downloads:&#x2F;downloads <br>  -v &#x2F;data&#x2F;transmission&#x2F;watch:&#x2F;watch <br>  -p 9091:9091 <br>  -p 51413:51413 <br>  -p 51413:51413&#x2F;udp <br>  –restart&#x3D;always <br>  linuxserver&#x2F;transmission:arm32v7-4.0.2<br>3）pull &amp;&amp; deploy qbittorrent</p>
+<h1 id="pull-1"><a href="#pull-1" class="headerlink" title="pull"></a>pull</h1><p>sudo docker pull linuxserver&#x2F;qbittorrent:arm32v7-4.5.3</p>
+<h1 id="deploy-默认帐号密码admin-adminadmin"><a href="#deploy-默认帐号密码admin-adminadmin" class="headerlink" title="deploy,默认帐号密码admin&#x2F;adminadmin"></a>deploy,默认帐号密码admin&#x2F;adminadmin</h1><p>sudo docker run –privileged –cap-add&#x3D;SYS_ADMIN -d <br>  –name&#x3D;qbittorrent <br>  -e PUID&#x3D; <br>  -e PGID&#x3D; <br>  -e TZ&#x3D;Asia&#x2F;Shanghai <br>  -e WEBUI_PORT&#x3D;8080 <br>  -e TORRENTING_PORT&#x3D;6881 <br>  -p 8080:8080 <br>  -p 6881:6881 <br>  -p 6881:6881&#x2F;udp <br>  -v &#x2F;data&#x2F;qbittorrent&#x2F;config:&#x2F;config <br>  -v &#x2F;media&#x2F;WDssd&#x2F;downloads:&#x2F;downloads <br>  –restart&#x3D;always <br>  linuxserver&#x2F;qbittorrent:arm32v7-4.5.3<br>ubuntu镜像作为测试种子：<a target="_blank" rel="noopener" href="https://cn.ubuntu.com/download/alternative-downloads">https://cn.ubuntu.com/download/alternative-downloads</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/30/241030%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="cm2yu7uda0002vglb6w67cpwf" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/10/30/20241031%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%B8%89%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/10/29/241029%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/01/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/30/20241031%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%B8%89%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/30/241030%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%BA%8C%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/29/241029%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%EF%BC%88%E4%B8%80%EF%BC%89/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
